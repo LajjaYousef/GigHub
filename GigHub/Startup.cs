@@ -8,6 +8,7 @@ namespace GigHub
     {
         public void Configuration(IAppBuilder app)
         {
+            //
             ConfigureAuth(app);
         }
     }
