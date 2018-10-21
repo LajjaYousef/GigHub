@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GigHub.Models
 {
@@ -16,14 +17,18 @@ namespace GigHub.Models
          */
         public int  id { get; set; }
 
+        [Required]
         public ApplicationUser Artist { get; set; }
 
         public DateTime DateTime { get; set; }
 
+        [Required]
+        [StringLength(225)]
         public string Venue { get; set; }
 
 
          // i use the Genre As The Forign Key to Attach the Gig With Genre Because Genre will Conatin the Name of Gig
+        [Required]
         public Genre Genre { get; set; }
 
 
