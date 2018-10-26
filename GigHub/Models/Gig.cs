@@ -15,11 +15,16 @@ namespace GigHub.Models
          
              
          */
-        public int  id { get; set; }
+        public int  Id { get; set; }
 
         [Required]
+        public string ArtistId { get; set; }
+
+
         public ApplicationUser Artist { get; set; }
 
+        
+        
         public DateTime DateTime { get; set; }
 
         [Required]
@@ -27,8 +32,10 @@ namespace GigHub.Models
         public string Venue { get; set; }
 
 
-         // i use the Genre As The Forign Key to Attach the Gig With Genre Because Genre will Conatin the Name of Gig
+        // i use the Genre As The Forign Key to Attach the Gig With Genre Because Genre will Conatin the Name of Gig
         [Required]
+        public byte GenreId { get; set; }
+
         public Genre Genre { get; set; }
 
 
