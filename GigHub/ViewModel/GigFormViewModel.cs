@@ -19,9 +19,12 @@ namespace GigHub.ViewModel
         public string Time { get; set; }
 
         [Required]
+        
         public byte Genre { get; set; }
 
         public IEnumerable<Genre> Genres { get; set; }
+        
+        
         
         
         // i replace  the type of DateTime To GetDataTime Because when Execute reflection happen
