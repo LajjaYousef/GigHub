@@ -7,13 +7,13 @@ namespace GigHub.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddForeignKeyPropertiesToGig : IMigrationMetadata
+    public sealed partial class AddForeignKeyPropToGig : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddForeignKeyPropertiesToGig));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddForeignKeyPropToGig));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810261806377_AddForeignKeyPropertiesToGig"; }
+            get { return "201811152016043_AddForeignKeyPropToGig"; }
         }
         
         string IMigrationMetadata.Source

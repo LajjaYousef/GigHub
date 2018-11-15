@@ -34,7 +34,7 @@ namespace GigHub.Models
 
         // i use the Genre As The Forign Key to Attach the Gig With Genre Because Genre will Conatin the Name of Gig
         [Required]
-        public byte GenreId { get; set; }
+        public int GenreId { get; set; }
 
         public Genre Genre { get; set; }
 
