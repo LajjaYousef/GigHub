@@ -1,4 +1,5 @@
 ﻿using GigHub.Models;
+using GigHub.ViewModel;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -19,11 +20,20 @@ namespace GigHub.Controllers
         public ActionResult Index()
         {
             var upcomingigs = _context.Gigs
-                    .Include(g => g.Artist)
+
+                .Include(g => g.Artist)
+
                 .Include(g => g.Genre)
                 
                 .Where(g => g.DateTime > DateTime.Now);
-            return View(upcomingigs);
+
+            var viewModel = new HomeViewModel
+            {
+                Upcominggig = upcomingigs,
+                ShowAction = User.Identity.IsAuthenticated,
+                Heading = "Upcoming Gigs"
+            };
+            return View("Gigs",viewModel);
         }
 
         public ActionResult About()

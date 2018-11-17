@@ -91,10 +91,14 @@ h6,
 }
 
 .btn {
-    font-size: 18px;
-    -ms-border-radius: 15px;
-    border-radius: 15px;
-    padding: 16px 20px;
+    /*font-size: 18px;
+    padding: 16px 20px;*/
+    -ms-border-radius: 9px;
+    border-radius: 9px;
+   
+  
+    
+    
 }
 .dropdown-menu {
     box-shadow: none;
@@ -139,6 +143,26 @@ h6,
     font-weight: bold;
     display: block;
 }
-    .gigs > li .detials .genre {
+    .gigs > li .detials .genre 
+    {
         font-size: 15px;
     }
+.voffset 
+{
+    margin-top: 2px;
+}
+.voffset1
+{
+    margin-top: 10px;
+}
+.voffset2
+{
+     margin-top: 20px;
+}
+.voffset3 
+{
+      margin-top: 40px;
+}.voffset4
+ {
+       margin-top: 80px;
+   }
