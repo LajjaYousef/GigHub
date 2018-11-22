@@ -1,8 +1,8 @@
-﻿using System.Linq;
+﻿using GigHub.Dtos;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
 using System.Web.Http;
-using GigHub.Dtos;
 
 namespace GigHub.Controllers
 {
@@ -21,7 +21,7 @@ namespace GigHub.Controllers
         {
             var userId = User.Identity.GetUserId();
 
-
+            // that mean if i click Going by the same username and the gig and want to click again will be error
             if (_context.Attendances.Any(a => a.AttendeeId == userId && a.GigId == dto.GigId))
                 return BadRequest("The Attendance Already exists");
 
