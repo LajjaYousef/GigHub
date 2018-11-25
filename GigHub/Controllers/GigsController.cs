@@ -15,9 +15,11 @@ namespace GigHub.Controllers
         public GigsController()
         {
             _context = new ApplicationDbContext();
-        }
+        } // Constructor ApplicationDbContext
 
         [Authorize] // to make a Registration
+        // This action allow me to make a contain of page (venue,Data,time,Genre) to create the venue i will attend
+
         public ActionResult Create()
 
         {
@@ -27,7 +29,15 @@ namespace GigHub.Controllers
                 Heading = "Add Aa Gig"
             };
             return View("Gigform",viewmodel);
+            /*
+             the view Gigform send me to the textbox of action (venue,genre,data,time)..
+             the viewmodel is a variable 
+             */
         }
+
+
+
+        // this action allow me to update data
         [Authorize] 
         public ActionResult Edit(int id)
 
@@ -52,13 +62,13 @@ namespace GigHub.Controllers
         }
 
        
-
+        // this action send me to the venue that is i will Upcoming it
         [Authorize]
         public ActionResult Mine()
         {
             var UserId = User.Identity.GetUserId();
             var gigs = _context.Gigs.
-                Where(g => g.ArtistId == UserId && g.DateTime > DateTime.Now)
+                Where(g => g.ArtistId == UserId && g.DateTime > DateTime.Now && !g.IsCanceled)
                 .Include(g => g.Genre)
                 .ToList();
             return View(gigs);

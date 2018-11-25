@@ -17,6 +17,8 @@ namespace GigHub.Models
          */
         public int  Id { get; set; }
 
+        public bool IsCanceled { get; set; }
+
         [Required]
         public string ArtistId { get; set; }
 

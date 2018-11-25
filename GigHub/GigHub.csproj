@@ -200,8 +200,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AttendanceController.cs" />
-    <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Controllers\API\AttendanceController.cs" />
+    <Compile Include="Controllers\API\FollowingsController.cs" />
+    <Compile Include="Controllers\API\GigsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -238,6 +239,10 @@
     <Compile Include="Migrations\201811161833356_AddFollowing.Designer.cs">
       <DependentUpon>201811161833356_AddFollowing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811242326561_AddIsCanceledToGig.cs" />
+    <Compile Include="Migrations\201811242326561_AddIsCanceledToGig.Designer.cs">
+      <DependentUpon>201811242326561_AddIsCanceledToGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -262,6 +267,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811161833356_AddFollowing.resx">
       <DependentUpon>201811161833356_AddFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811242326561_AddIsCanceledToGig.resx">
+      <DependentUpon>201811242326561_AddIsCanceledToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
